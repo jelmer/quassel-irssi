@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	$(MAKE) -C core
+
+override_dh_auto_install:
+	$(MAKE) -C core install
+
+override_dh_auto_clean:
+	$(MAKE) -C core clean
+
+override_dh_strip:
+	dh_strip --dbg-package=irssi-plugin-quassel-dbg

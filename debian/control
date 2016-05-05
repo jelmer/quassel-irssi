@@ -1,0 +1,27 @@
+Source: quassel-irssi
+Priority: optional
+Maintainer: Jelmer Vernooij <jelmer@debian.org>
+Build-Depends: debhelper (>= 9), pkg-config, libglib2.0-dev, irssi-dev
+Standards-Version: 3.9.7
+Section: net
+Homepage: https://github.com/phhusson/quassel-irssi
+Vcs-Git: git://anonscm.debian.org/collab-maint/quassel-irssi.git
+Vcs-Browser: http://anonscm.debian.org/cgit/collab-maint/quassel-irssi.git/
+
+Package: irssi-plugin-quassel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, irssi
+Suggests: quassel-core
+Enhances: irssi
+Description: quassel plugin for irssi
+ irssi plugin which allows connecting to a quassel server.
+
+Package: irssi-plugin-quassel-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: ${misc:Depends}, irssi-plugin-quassel (= ${binary:Version})
+Description: quassel plugin for irssi - debugging symbols
+ irssi plugin which allows connecting to a quassel server.
+ .
+ This package contains the debugging symbols.

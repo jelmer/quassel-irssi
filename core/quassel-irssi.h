@@ -1,7 +1,7 @@
 #ifndef QUASSEL_IRSSI_H
 #define QUASSEL_IRSSI_H
 
-#include "export.h"
+#include "lib/export.h"
 
 #define STRUCT_SERVER_CONNECT_REC struct Quassel_SERVER_CONNECT_REC_s 
 typedef struct Quassel_SERVER_CONNECT_REC_s {

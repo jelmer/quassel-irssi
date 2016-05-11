@@ -1,4 +1,4 @@
-quassel-irssi (0~git20160612-1) UNRELEASED; urgency=medium
+quassel-irssi (0~git20160612-1) experimental; urgency=low
 
   * Initial release. (Closes: #745371)
 

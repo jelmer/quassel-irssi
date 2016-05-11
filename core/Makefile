@@ -17,7 +17,7 @@ OBJECTS+=quassel-net.o quassel-msgs.o quassel-cmds.o
 OBJECTS+=irssi/network-openssl.o
 OBJECTS+=quassel-fe-window.o quassel-fe-level.o quassel-cfg.o
 
-CFLAGS+=$(shell pkg-config --cflags quasselc) -std=gnu11 -Wall -Wextra -Werror $(IRSSI_CFLAGS) -Wmissing-prototypes -Wmissing-declarations
+CFLAGS=-std=gnu11 -Wall -Wextra -Werror -g -O2 $(IRSSI_CFLAGS) -Wmissing-prototypes -Wmissing-declarations
 
 TARGET=libquassel_core.so
 
@@ -30,8 +30,8 @@ LIBQUASSEL+=lib/negotiation.o
 irssi/network-openssl.o: CFLAGS:=$(IRSSI_CFLAGS)
 quasselc-connector.o: CFLAGS:=$(CFLAGS) -Ilib
 
-$(TARGET): $(OBJECTS)
-	gcc -shared $^ -o $@ -lz $(shell pkg-config --libs quasselc) $(LDFLAGS)
+$(TARGET): $(OBJECTS) $(LIBQUASSEL)
+	gcc -shared $^ -o $@ -lz
 
 install: $(TARGET)
 	$(INSTALL) -d $(IRSSI_LIB)/modules

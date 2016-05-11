@@ -6,10 +6,10 @@ CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 
 %:
-	CFLAGS="$(CFLAGS) $(shell pkg-config --cflags quasselc)" LDFLAGS="$(LDFLAGS) $(shell pkg-config --libs quasselc)" dh $@
+	dh $@
 
 override_dh_auto_build:
-	$(MAKE) -C core
+	$(MAKE) -C core LDFLAGS="$(LDFLAGS)"
 
 override_dh_auto_install:
 	mkdir -p debian/tmp

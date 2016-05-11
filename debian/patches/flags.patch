@@ -7,7 +7,7 @@ index dc88fa9..1b055d4 100644
  OBJECTS+=quassel-fe-window.o quassel-fe-level.o quassel-cfg.o
  
 -CFLAGS=-std=gnu11 -Wall -Wextra -Werror -g -O2 $(IRSSI_CFLAGS) -Wmissing-prototypes -Wmissing-declarations
-+CFLAGS:=$(shell pkg-config --cflags quasselc) $(CFLAGS) -std=gnu11 -Wall -Wextra -Werror $(IRSSI_CFLAGS) -Wmissing-prototypes -Wmissing-declarations
++CFLAGS+=$(shell pkg-config --cflags quasselc) -std=gnu11 -Wall -Wextra -Werror $(IRSSI_CFLAGS) -Wmissing-prototypes -Wmissing-declarations
  
  TARGET=libquassel_core.so
  
@@ -17,7 +17,7 @@ index dc88fa9..1b055d4 100644
 -$(TARGET): $(OBJECTS) $(LIBQUASSEL)
 +$(TARGET): $(OBJECTS)
 -	gcc -shared $^ -o $@ -lz
-+	gcc -shared $^ -o $@ -lz $(shell pkg-config --libs quasselc)
++	gcc -shared $^ -o $@ -lz $(shell pkg-config --libs quasselc) $(LDFLAGS)
  
  install: $(TARGET)
  	$(INSTALL) -d $(IRSSI_LIB)/modules

@@ -4,6 +4,12 @@ Source: https://github.com/phhusson/quassel-irssi
 
 Files: *
 Copyright: 2013-2016 Pierre-Hugues Husson <pierre-hugues.husson@telecom-paristech.fr>
+License: GPl-3+
+
+Files: debian/*
+Copyright: 2016 Jelmer Vernooij <jelmer@debian.org>
+License: GPL-3+
+
 License: GPL-3+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -20,7 +26,3 @@ License: GPL-3+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
-
-Files: debian/*
-Copyright: 2016 Jelmer Vernooij <jelmer@debian.org>
-License: GPL-3+

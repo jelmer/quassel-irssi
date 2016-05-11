@@ -1,8 +1,8 @@
 Source: quassel-irssi
 Priority: optional
-Maintainer: Jelmer Vernooij <jelmer@debian.org>
+Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
 Build-Depends: debhelper (>= 9), pkg-config, libglib2.0-dev, irssi-dev, libquasselc-dev
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Section: net
 Homepage: https://github.com/phhusson/quassel-irssi
 Vcs-Git: git://anonscm.debian.org/collab-maint/quassel-irssi.git

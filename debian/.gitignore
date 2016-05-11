@@ -1,2 +1,7 @@
 *.debhelper.log
+*.substvars
+.debhelper/
 debhelper-build-stamp
+irssi-plugin-quassel
+irssi-plugin-quassel-dbg
+files

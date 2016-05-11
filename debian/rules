@@ -12,7 +12,8 @@ override_dh_auto_build:
 	$(MAKE) -C core
 
 override_dh_auto_install:
-	$(MAKE) -C core install
+	mkdir -p debian/tmp
+	$(MAKE) -C core install DESTDIR=$(shell pwd)/debian/tmp
 
 override_dh_auto_clean:
 	$(MAKE) -C core clean

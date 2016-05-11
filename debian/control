@@ -13,8 +13,8 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, irssi
 Suggests: quassel-core
 Enhances: irssi
-Description: quassel plugin for irssi
- irssi plugin which allows connecting to a quassel server.
+Description: Quassel plugin for irssi
+ irssi plugin which allows connecting to a quassel server (core).
 
 Package: irssi-plugin-quassel-dbg
 Architecture: any
@@ -22,6 +22,6 @@ Section: debug
 Priority: extra
 Depends: ${misc:Depends}, irssi-plugin-quassel (= ${binary:Version})
 Description: quassel plugin for irssi - debugging symbols
- irssi plugin which allows connecting to a quassel server.
+ irssi plugin which allows connecting to a quassel server (core).
  .
  This package contains the debugging symbols.

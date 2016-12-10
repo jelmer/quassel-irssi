@@ -9,11 +9,11 @@ LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 	dh $@
 
 override_dh_auto_build:
-	$(MAKE) -C core LDFLAGS="$(LDFLAGS)"
+	$(MAKE) -C core LDFLAGS="$(LDFLAGS)" SYSTEM_QUASSELC=1
 
 override_dh_auto_install:
 	mkdir -p debian/tmp
-	$(MAKE) -C core install DESTDIR=$(shell pwd)/debian/tmp
+	$(MAKE) -C core install DESTDIR=$(shell pwd)/debian/tmp SYSTEM_QUASSELC=1
 
 override_dh_auto_clean:
 	$(MAKE) -C core clean

@@ -4,16 +4,19 @@ CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)
+export SYSTEM_QUASSELC=1
 
 %:
 	dh $@
 
 override_dh_auto_build:
-	$(MAKE) -C core LDFLAGS="$(LDFLAGS)" SYSTEM_QUASSELC=1
+	$(MAKE) -C core LDFLAGS="$(LDFLAGS)"
 
 override_dh_auto_install:
 	mkdir -p debian/tmp
-	$(MAKE) -C core install DESTDIR=$(shell pwd)/debian/tmp SYSTEM_QUASSELC=1
+	$(MAKE) -C core install DESTDIR=$(shell pwd)/debian/tmp
 
 override_dh_auto_clean:
 	$(MAKE) -C core clean

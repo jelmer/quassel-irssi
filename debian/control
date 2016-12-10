@@ -1,7 +1,7 @@
 Source: quassel-irssi
 Priority: optional
 Maintainer: Jelmer Vernooĳ <jelmer@debian.org>
-Build-Depends: debhelper (>= 9), pkg-config, libglib2.0-dev, irssi-dev, libquasselc-dev
+Build-Depends: debhelper (>= 9), pkg-config, libglib2.0-dev, irssi-dev (>= 0.8.20-2), libquasselc-dev
 Standards-Version: 3.9.8
 Section: net
 Homepage: https://github.com/phhusson/quassel-irssi
@@ -10,7 +10,7 @@ Vcs-Browser: http://anonscm.debian.org/cgit/collab-maint/quassel-irssi.git/
 
 Package: irssi-plugin-quassel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, irssi
+Depends: ${shlibs:Depends}, ${misc:Depends}, irssi (>= 0.8.20-2)
 Suggests: quassel-core
 Enhances: irssi
 Description: Quassel plugin for irssi

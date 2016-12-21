@@ -1,4 +1,4 @@
-quassel-irssi (0~git20161221-1) UNRELEASED; urgency=medium
+quassel-irssi (0~git20161221-1) experimental; urgency=medium
 
   * New upstream snapshot.
    + Drop flags.patch; use new SYSTEM_QUASSELC setting instead.

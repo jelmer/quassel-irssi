@@ -5,6 +5,7 @@ quassel-irssi (0~git20161221-1) UNRELEASED; urgency=medium
   * Install plugin into multi-arch irssi directory. Thanks,
     Diederik de Haas. Closes: #847634
   * Link against libssl explicitly, rather than relying on irssi's.
+  * Clarify OpenSSL exception for upstream license.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 10 Dec 2016 13:50:34 +0000
 

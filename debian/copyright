@@ -4,13 +4,13 @@ Source: https://github.com/phhusson/quassel-irssi
 
 Files: *
 Copyright: 2013-2016 Pierre-Hugues Husson <pierre-hugues.husson@telecom-paristech.fr>
-License: GPl-3+
+License: GPl-3+ with OpenSSL exception
 
 Files: debian/*
 Copyright: 2016 Jelmer Vernooij <jelmer@debian.org>
-License: GPL-3+
+License: GPL-3+ with OpenSSL exception
 
-License: GPL-3+
+License: GPL-3+ with OpenSSL exception
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 3 of the License, or
@@ -26,3 +26,8 @@ License: GPL-3+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+ .
+ COPYING has the following note:
+ .
+ Specific permission is granted for the GPLed code in this distribution to
+ be linked to OpenSSL without invoking GPL clause 2(b).

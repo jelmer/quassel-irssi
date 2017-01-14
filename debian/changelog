@@ -1,3 +1,9 @@
+quassel-irssi (0~git20170114-1) UNRELEASED; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 14 Jan 2017 20:57:28 +0000
+
 quassel-irssi (0~git20161221-1) experimental; urgency=medium
 
   * New upstream snapshot.

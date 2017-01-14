@@ -3,6 +3,8 @@ quassel-irssi (0~git20170114-1) UNRELEASED; urgency=medium
   * New upstream snapshot.
   * Add patch no_asm_socket.patch: avoid asm/socket.h, which is not
     available everywhere.
+  * Add disable_submodule.patch: disable quasselc submodule - it's
+    pulled in as an external library.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 14 Jan 2017 20:57:28 +0000
 

@@ -1,0 +1,14 @@
+commit 71a81b4e4bf03b032066a6202796a76a86b736d3
+Author: Jelmer Vernooĳ <jelmer@jelmer.uk>
+Date:   Sat Jan 14 21:09:09 2017 +0000
+
+    Disable submodule.
+
+diff --git a/.gitmodules b/.gitmodules
+index 1e4b36e..e69de29 100644
+--- a/.gitmodules
++++ b/.gitmodules
+@@ -1,3 +0,0 @@
+-[submodule "core/lib"]
+-	path = core/lib
+-	url = https://github.com/phhusson/QuasselC.git

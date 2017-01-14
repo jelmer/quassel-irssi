@@ -1,4 +1,4 @@
-quassel-irssi (0~git20170114-1) UNRELEASED; urgency=medium
+quassel-irssi (0~git20170114-1) experimental; urgency=medium
 
   * New upstream snapshot.
   * Add patch no_asm_socket.patch: avoid asm/socket.h, which is not

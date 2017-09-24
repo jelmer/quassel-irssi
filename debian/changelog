@@ -1,4 +1,4 @@
-quassel-irssi (0~git20170924-1) UNRELEASED; urgency=medium
+quassel-irssi (0~git20170924-1) experimental; urgency=medium
 
   * New upstream snapshot.
    + Fixes compatibility with GCC 7. Closes: #876232

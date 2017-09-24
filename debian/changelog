@@ -1,3 +1,10 @@
+quassel-irssi (0~git20170924-1) UNRELEASED; urgency=medium
+
+  * New upstream snapshot.
+   + Fixes compatibility with GCC 7. Closes: #876232
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 24 Sep 2017 17:52:12 +0100
+
 quassel-irssi (0~git20170114-1) experimental; urgency=medium
 
   * New upstream snapshot.
